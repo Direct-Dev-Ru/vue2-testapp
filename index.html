@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <script src="js/vendor/vue.js"></script>
+  <script src="js/vendor/crypto-js.js"></script>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+  <link rel="stylesheet" href="css/vendor/bootstrap.css" />
+  <link rel="stylesheet" href="css/app.css" />
+
+  <title>Vue simple course</title>
+</head>
+
+<body>
+  <div id="app">
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#" v-text="sitename"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+          aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://habr.com/ru/company/ruvds/blog/509700/">
+                Course source</a>
+            </li>
+          </ul>
+          <span class="navbar-text ml-auto" style="font-size: 36px; color: rgb(112, 112, 110)">
+            <i class="fas fa-shopping-cart">
+              <span style="font-size: 20px; color: blue">{{cart}}</span>
+            </i>
+          </span>
+        </div>
+      </nav>
+    </header>
+
+    <main style="margin-top: 20px">
+      <product :hasharray="getArrayWithSHAIds" :setcartcount="setCartItemCount"></product>
+    </main>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="js/vendor/jquery.js"></script>
+  <script src="js/vendor/popper.js"></script>
+  <script src="js/vendor/bootstrap.js"></script>
+  
+  <!-- Components -->
+  <script src="js/components/info-tabs.js"></script>
+  <script src="js/components/product-tabs.js"></script>
+  <script src="js/components/product-review.js"></script>
+  <script src="js/components/product.js"></script>
+  <!-- Main -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
